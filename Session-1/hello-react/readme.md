@@ -14,7 +14,7 @@ Display a static heading using JavaScript only.
 
 ## #3 React version
 
-index-3.html
-index-4.html
+index-3.html  
+index-4.html  
 
 Render content using React.

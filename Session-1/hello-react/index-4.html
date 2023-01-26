@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+<body>
+    <header style="margin: 25px; padding: 10px; border: 1px solid #c0c0c0; text-align: center; font-family: sans-serif;">Header</header>
+
+    <div id="one"></div>
+
+    <div id="two"></div>
+
+    <div id="three">
+        <h3>This content will be overriden by React</h3>
+    </div>
+
+    <footer style="margin: 25px; padding: 10px; border: 1px solid #c0c0c0; text-align: center; font-family: sans-serif;">Footer</footer>
+
+    <!-- Inject React -->
+    <script
+        crossorigin
+        src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+        crossorigin
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+        const h1Heading = React.createElement(
+            'h1',
+            {},
+            '*~ Namaste React ~*'
+        );
+
+        const h2Heading = React.createElement(
+            'h2',
+            {},
+            '*~ Hello React ~*'
+        );
+
+        const h3Heading = React.createElement(
+            'h3',
+            {},
+            '= + * [ React ] * + ='
+        );
+
+        const oneRoot = ReactDOM.createRoot(
+            document.getElementById('one')
+        );
+
+        oneRoot.render(h1Heading);
+
+        const twoRoot = ReactDOM.createRoot(
+            document.getElementById('two')
+        );
+
+        twoRoot.render(h2Heading);
+
+        const threeRoot = ReactDOM.createRoot(
+            document.getElementById('three')
+        );
+
+        threeRoot.render(h3Heading);
+    </script>
+</body>
+</html>
